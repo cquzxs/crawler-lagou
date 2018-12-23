@@ -1,0 +1,15 @@
+body { font-size: 14px;}
+/* 自定义样式 */
+.pgwMenuCustom { background: #f1941c; height: 40px; position: relative; list-style: none }
+.pgwMenuCustom ul { list-style: none; white-space: nowrap; margin: 0; padding: 0 }
+.pgwMenuCustom li { float: left }
+.pgwMenuCustom a { display: block; color: #fff; line-height: 40px; padding: 0 30px; text-decoration: none }
+.pgwMenuCustom a.selected { background: #e5601d }
+.pgwMenuCustom li a:hover { background: #e86f2e; text-decoration: none }
+/* 自定义样式2 */
+.pgwMenuCustom2 { background: #9999CC; height: 40px; position: relative; list-style: none }
+.pgwMenuCustom2 ul { list-style: none; white-space: nowrap; margin: 0; padding: 0 }
+.pgwMenuCustom2 li { float: left }
+.pgwMenuCustom2 a { display: block; color: #fff; line-height: 40px; padding: 0 30px; text-decoration: none }
+.pgwMenuCustom2 a.selected { background: #9966CC }
+.pgwMenuCustom2 li a:hover { background: #9966CC; text-decoration: none }
