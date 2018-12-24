@@ -1,7 +1,7 @@
 package com.ssh.service.basic.api;
 
 
-import com.ssh.entity.BaseCompanySizeView;
+import com.ssh.model.entity.BaseCompanySizeView;
 
 import java.util.List;
 

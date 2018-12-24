@@ -1,6 +1,6 @@
 package com.ssh.dao.basic.api;
 
-import com.ssh.entity.BaseSalaryRangeView;
+import com.ssh.model.entity.BaseSalaryRangeView;
 
 import java.util.List;
 

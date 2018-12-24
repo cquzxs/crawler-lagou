@@ -1,7 +1,7 @@
 package com.ssh.service.Task;
 
 import com.ssh.model.constants.MyConstants;
-import com.ssh.entity.RecruitmentInfo;
+import com.ssh.model.entity.RecruitmentInfo;
 import com.ssh.model.RequestParams;
 import com.ssh.model.crawler.api.AbstractModel;
 import com.ssh.service.basic.api.IRecruitmentInfoService;

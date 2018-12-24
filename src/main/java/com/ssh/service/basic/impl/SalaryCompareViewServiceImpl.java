@@ -1,7 +1,7 @@
 package com.ssh.service.basic.impl;
 
 import com.ssh.dao.basic.api.ISalaryCompareViewDao;
-import com.ssh.entity.SalaryCompareView;
+import com.ssh.model.entity.SalaryCompareView;
 import com.ssh.service.basic.api.ISalaryCompareViewService;
 import org.springframework.stereotype.Service;
 

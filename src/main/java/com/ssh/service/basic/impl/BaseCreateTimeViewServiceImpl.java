@@ -1,7 +1,7 @@
 package com.ssh.service.basic.impl;
 
 import com.ssh.dao.basic.api.IBaseCreateTimeViewDao;
-import com.ssh.entity.BaseCreateTimeView;
+import com.ssh.model.entity.BaseCreateTimeView;
 import com.ssh.service.basic.api.IBaseCreateTimeViewService;
 import org.springframework.stereotype.Service;
 

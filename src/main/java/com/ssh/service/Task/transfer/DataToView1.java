@@ -1,7 +1,7 @@
 package com.ssh.service.Task.transfer;
 
-import com.ssh.entity.RecruitmentInfo;
-import com.ssh.entity.SalaryCompareView;
+import com.ssh.model.entity.RecruitmentInfo;
+import com.ssh.model.entity.SalaryCompareView;
 import com.ssh.service.basic.api.IRecruitmentInfoService;
 import com.ssh.service.basic.api.ISalaryCompareViewService;
 import org.apache.log4j.Logger;

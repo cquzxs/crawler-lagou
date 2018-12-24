@@ -1,6 +1,6 @@
 package com.ssh.dao.basic.api;
 
-import com.ssh.entity.CityDistributeView;
+import com.ssh.model.entity.CityDistributeView;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.ssh.entity;
+package com.ssh.model.entity;
 
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;

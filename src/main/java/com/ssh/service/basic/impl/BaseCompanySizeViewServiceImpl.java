@@ -1,7 +1,7 @@
 package com.ssh.service.basic.impl;
 
 import com.ssh.dao.basic.api.IBaseCompanySizeViewDao;
-import com.ssh.entity.BaseCompanySizeView;
+import com.ssh.model.entity.BaseCompanySizeView;
 import com.ssh.service.basic.api.IBaseCompanySizeViewService;
 import org.springframework.stereotype.Service;
 

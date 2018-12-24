@@ -2,7 +2,7 @@ package com.ssh.dao.basic.impl;
 
 import com.ssh.dao.basic.api.ICityDistributeViewDao;
 import com.ssh.dao.common.api.ICommonDao;
-import com.ssh.entity.CityDistributeView;
+import com.ssh.model.entity.CityDistributeView;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;

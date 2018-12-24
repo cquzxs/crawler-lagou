@@ -3,9 +3,9 @@ package com.ssh.dao.basic.impl;
 
 import com.ssh.dao.common.api.ICommonDao;
 import com.ssh.dao.basic.api.IRecruitmentInfoTableDao;
-import com.ssh.entity.BaseCompanySizeView;
-import com.ssh.entity.BaseSalaryRangeView;
-import com.ssh.entity.RecruitmentInfo;
+import com.ssh.model.entity.BaseCompanySizeView;
+import com.ssh.model.entity.BaseSalaryRangeView;
+import com.ssh.model.entity.RecruitmentInfo;
 import org.hibernate.query.Query;
 import org.hibernate.Session;
 import org.springframework.stereotype.Repository;

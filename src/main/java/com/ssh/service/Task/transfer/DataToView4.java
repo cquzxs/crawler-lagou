@@ -1,6 +1,6 @@
 package com.ssh.service.Task.transfer;
 
-import com.ssh.entity.BaseCompanySizeView;
+import com.ssh.model.entity.BaseCompanySizeView;
 import com.ssh.service.basic.api.IBaseCompanySizeViewService;
 import com.ssh.service.basic.api.IRecruitmentInfoService;
 import org.apache.log4j.Logger;

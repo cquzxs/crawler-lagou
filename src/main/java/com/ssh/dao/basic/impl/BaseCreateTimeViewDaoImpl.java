@@ -2,7 +2,7 @@ package com.ssh.dao.basic.impl;
 
 import com.ssh.dao.basic.api.IBaseCreateTimeViewDao;
 import com.ssh.dao.common.api.ICommonDao;
-import com.ssh.entity.BaseCreateTimeView;
+import com.ssh.model.entity.BaseCreateTimeView;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;

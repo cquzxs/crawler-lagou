@@ -1,7 +1,7 @@
 package com.ssh.service.Task.transfer;
 
-import com.ssh.entity.CityDistributeView;
-import com.ssh.entity.RecruitmentInfo;
+import com.ssh.model.entity.CityDistributeView;
+import com.ssh.model.entity.RecruitmentInfo;
 import com.ssh.service.basic.api.ICityDistributeViewService;
 import com.ssh.service.basic.api.IRecruitmentInfoService;
 import org.apache.log4j.Logger;

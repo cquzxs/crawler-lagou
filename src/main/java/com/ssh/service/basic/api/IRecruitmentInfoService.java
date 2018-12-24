@@ -1,9 +1,9 @@
 package com.ssh.service.basic.api;
 
 
-import com.ssh.entity.BaseCompanySizeView;
-import com.ssh.entity.BaseSalaryRangeView;
-import com.ssh.entity.RecruitmentInfo;
+import com.ssh.model.entity.BaseCompanySizeView;
+import com.ssh.model.entity.BaseSalaryRangeView;
+import com.ssh.model.entity.RecruitmentInfo;
 
 import java.util.List;
 

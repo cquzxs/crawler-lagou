@@ -1,7 +1,7 @@
 package com.ssh.dao.basic.api;
 
 
-import com.ssh.entity.SalaryCompareView;
+import com.ssh.model.entity.SalaryCompareView;
 
 import java.util.List;
 

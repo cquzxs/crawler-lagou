@@ -1,7 +1,7 @@
 package com.ssh.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.ssh.entity.*;
+import com.ssh.model.entity.*;
 import com.ssh.service.basic.api.*;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;

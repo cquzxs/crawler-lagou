@@ -1,7 +1,7 @@
 package com.ssh.service.basic.impl;
 
 import com.ssh.dao.basic.api.IBaseSalaryRangeViewDao;
-import com.ssh.entity.BaseSalaryRangeView;
+import com.ssh.model.entity.BaseSalaryRangeView;
 import com.ssh.service.basic.api.IBaseSalaryRangeViewService;
 import org.springframework.stereotype.Service;
 

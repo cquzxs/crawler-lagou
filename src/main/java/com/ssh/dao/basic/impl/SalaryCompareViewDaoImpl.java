@@ -2,7 +2,7 @@ package com.ssh.dao.basic.impl;
 
 import com.ssh.dao.common.api.ICommonDao;
 import com.ssh.dao.basic.api.ISalaryCompareViewDao;
-import com.ssh.entity.SalaryCompareView;
+import com.ssh.model.entity.SalaryCompareView;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;

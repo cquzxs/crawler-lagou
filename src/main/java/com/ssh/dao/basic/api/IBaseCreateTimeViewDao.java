@@ -1,6 +1,6 @@
 package com.ssh.dao.basic.api;
 
-import com.ssh.entity.BaseCreateTimeView;
+import com.ssh.model.entity.BaseCreateTimeView;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package com.ssh.service.Task.transfer;
 
-import com.ssh.entity.BaseSalaryRangeView;
+import com.ssh.model.entity.BaseSalaryRangeView;
 import com.ssh.service.basic.api.IBaseSalaryRangeViewService;
 import com.ssh.service.basic.api.IRecruitmentInfoService;
 import org.apache.log4j.Logger;

@@ -1,6 +1,6 @@
 package com.ssh.service.basic.api;
 
-import com.ssh.entity.SalaryCompareView;
+import com.ssh.model.entity.SalaryCompareView;
 
 import java.util.List;
 

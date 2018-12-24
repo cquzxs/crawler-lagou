@@ -1,7 +1,7 @@
 package com.ssh.service.basic.impl;
 
 import com.ssh.dao.basic.api.ICityDistributeViewDao;
-import com.ssh.entity.CityDistributeView;
+import com.ssh.model.entity.CityDistributeView;
 import com.ssh.service.basic.api.ICityDistributeViewService;
 import org.springframework.stereotype.Service;
 

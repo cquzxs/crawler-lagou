@@ -1,7 +1,7 @@
 package com.ssh.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.ssh.entity.RecruitmentInfo;
+import com.ssh.model.entity.RecruitmentInfo;
 import com.ssh.model.MyPage;
 import com.ssh.service.basic.api.IRecruitmentInfoService;
 import com.ssh.service.util.GlobelData;
