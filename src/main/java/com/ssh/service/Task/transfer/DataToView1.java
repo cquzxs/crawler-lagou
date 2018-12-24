@@ -41,13 +41,8 @@ public class DataToView1 implements Runnable{
      */
     public void dataToSalaryCompareView(){
         logger.info("视图1 start--------------------");
-        System.out.println("查询所有招聘信息中...");
         List<RecruitmentInfo> list=this.recruitmentInfoService.selectAllRecruitmentInfo();//初始数据
-        System.out.println("查询所有招聘信息完成.");
-
-        System.out.println("删除原有数据中...");
         this.salaryCompareViewService.deleteAll();//删除中间数据
-        System.out.println("删除原有数据完成.");
 
         List<SalaryCompareView> viewList=new ArrayList<>();//中间数据
         for (int i = 0; i < list.size(); i++) {
@@ -59,21 +54,13 @@ public class DataToView1 implements Runnable{
             salaryCompareView.setIsSchool(recruitmentInfo.getFollowsCount());
             viewList.add(salaryCompareView);
         }
-        System.out.println("保存中间数据中...");
         this.salaryCompareViewService.addList(viewList);
-        System.out.println("保存中间数据完成.");
 
-        System.out.println("获取最终数据中...");
         List<SalaryCompareView> viewList2=this.salaryCompareViewService.selectAvgSalary();//最终数据
-        System.out.println("获取最终数据完成.");
 
-        System.out.println("删除中间数据中...");
         this.salaryCompareViewService.deleteAll();
-        System.out.println("删除中间数据完成.");
 
-        System.out.println("保存最终数据中...");
         this.salaryCompareViewService.addList(viewList2);
-        System.out.println("保存最终数据完成.");
 
         logger.info("视图1 end--------------------");
     }

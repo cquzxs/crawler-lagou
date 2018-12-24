@@ -54,12 +54,13 @@ public class CrawlerInfoServiceImpl implements ICrawlerInfoService{
      */
     private void startCrawler(String isSchool) {
         //启动爬虫管理线程
-        if(executorService != null){
+        if(executorService == null){
             executorService = Executors.newFixedThreadPool(MyConstants.poolSize);
         }
         Iterator iterator=map.entrySet().iterator();
         ManagementThread managementThread=new ManagementThread(iterator,recruitmentInfoService,executorService,isSchool);
         executorService.execute(managementThread);
+        isRunning = true;
         logger.info("启动爬虫管理线程");
     }
 
@@ -80,9 +81,9 @@ public class CrawlerInfoServiceImpl implements ICrawlerInfoService{
     private void deleteData(String isDelete) {
         if(MyConstants.one.equals(isDelete)){    //选择了删除现有数据
             logger.info("删除所有数据");
-            System.out.println("delete...");
+            logger.info("delete...");
             recruitmentInfoService.deleteAllRecruitmentInfo();
-            System.out.println("delete finish.");
+            logger.info("delete finish.");
         }
     }
 

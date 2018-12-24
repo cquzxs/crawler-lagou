@@ -10,7 +10,7 @@ import javax.persistence.*;
  */
 @Data
 @Entity   //hibernate之实体配置
-@Table(name = "BaseSalaryRangeView")
+@Table(name = "baseSalaryRangeView")
 public class BaseSalaryRangeView {
     @Id
     @Column(name = "id")

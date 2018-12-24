@@ -3,6 +3,7 @@ package com.ssh.service.views.impl;
 import com.ssh.service.basic.api.*;
 import com.ssh.service.views.api.IViewsService;
 import com.ssh.service.Task.transfer.*;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
@@ -10,6 +11,7 @@ import javax.annotation.Resource;
  * Created by zxs on 2018/12/24.
  * 更新视图信息
  */
+@Service("viewsService")
 public class ViewsServiceImpl implements IViewsService{
 
     @Resource(name="recruitmentInfoService")
@@ -53,6 +55,8 @@ public class ViewsServiceImpl implements IViewsService{
             //将数据转换为视图5
             DataToView5 dataToView5=new DataToView5(recruitmentInfoService,baseSalaryRangeViewService);
             new Thread(dataToView5).start();
+
+            isRunning = true;
         }
     }
 }

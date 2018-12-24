@@ -8,7 +8,7 @@ import javax.persistence.*;
 //城市分布视图
 @Data
 @Entity   //hibernate之实体配置
-@Table(name = "CityDistributeView")
+@Table(name = "cityDistributeView")
 public class CityDistributeView {
     @Id
     @Column(name = "id")

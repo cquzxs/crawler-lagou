@@ -35,13 +35,9 @@ public class DataToView5 implements Runnable{
      */
     private void dataToBaseSalaryRangeView(){
         logger.info("视图5 start---------------------");
-        System.out.println("查询所有招聘信息中...");
         List<BaseSalaryRangeView> list=this.recruitmentInfoService.selectBaseSalaryRangeViewCount();//初始数据
-        System.out.println("查询所有招聘信息完成.");
 
-        System.out.println("删除原有数据中...");
         this.baseSalaryRangeViewService.deleteAll();//删除原有数据
-        System.out.println("删除原有数据完成.");
 
         List<BaseSalaryRangeView> viewList=new ArrayList<>();
         String currentJobName="";
@@ -115,9 +111,7 @@ public class DataToView5 implements Runnable{
                 }
             }
         }
-        System.out.println("保存最终数据中...");
         this.baseSalaryRangeViewService.addList(viewList);//保存中间数据
-        System.out.println("保存最终数据完成.");
 
         logger.info("视图5 end--------------------");
     }

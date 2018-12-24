@@ -23,14 +23,12 @@ public class InfoListController {
 
     @RequestMapping("/getInfoListPage")
     public String getInfoListPage(){
-        logger.info("招聘信息展示页");
         return "InfoListPage";
     }
 
     @RequestMapping(value="/getJobList",produces="html/text;charset=UTF-8")
     @ResponseBody
     public String getJobList(){
-        logger.info("获取职位列表");
         String res="";
         List<String> list=this.recruitmentInfoService.getJobList();
         HashMap<String,String> map=new HashMap<>();

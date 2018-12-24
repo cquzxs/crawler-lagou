@@ -72,27 +72,7 @@
     <button onclick="stopCrawler();" class="button button-3d button-action button-pill">停止爬取招聘信息</button>
     <br><br><br>
 
-    爬取状态：<span id="a1">${info.status}</span><br>
-    开始爬取时间：<span id="a2">${info.startTime}</span><br>
-    结束爬取时间：<span id="a3">${info.endTime}</span><br>
-    已爬取时长：<span id="a4">${info.duration}</span><br>
-    <br>
-    当前爬取数据总数：<span id="a5">${info.dataCount}</span><br>
-    <%--当前爬取速度：--%><span id="a7" style="display: none">${info.crawlerSpeed}</span><br>
-    <%--爬取速度折线图容器--%>
-    <div id="container" style="width:640px;height:200px;display: none" ></div>
-    <%--当前请求URL总数：<span id="a6">${info.requestTimes}</span><br>--%>
-    <br>
-    <%--        任务总数：<span id="a8" >${info.requestThreadCount}</span><br>
-            已执行任务数：<span id="a10" >${info.executedTaskCount}</span><br>--%>
-    <%--任务进度进度条--%>
-    <div class="flex-center">
-        <span>任务进度(<span id="a10" >${info.executedTaskCount}</span>/<span id="a8" >${info.requestThreadCount}</span>)</span>
-        <span class="container">
-                 <span id="progressBar" class="h-100P bar"></span>
-        </span>
-    </div>
-    <br>
+    爬取状态：<span id="a1"></span><br>
     <button class="button button-3d button-primary button-rounded" onclick="updateViews();">更新视图信息</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <br><br><br>
     更新状态：<span id="a12"></span><br>

@@ -37,7 +37,6 @@ public class DataVisualController {
     @RequestMapping(value="/getSalaryCompareViewByJobName",produces="html/text;charset=UTF-8")
     @ResponseBody
     public String getSalaryCompareViewByJobName(@RequestParam String jobName,String isSchool){  //通过职位名称获取薪资对比视图
-        logger.info("视图1");
         List<SalaryCompareView> list=this.salaryCompareViewService.selectByJobName(jobName,isSchool);
         String res= JSON.toJSONString(list);
         return res;
@@ -46,7 +45,6 @@ public class DataVisualController {
     @RequestMapping(value="/getCityDistributeViewByJobName",produces="html/text;charset=UTF-8")
     @ResponseBody
     public String getCityDistributeViewByJobName(@RequestParam String jobName,String isSchool){ //通过职位名称获取城市分布视图
-        logger.info("视图2");
         List<CityDistributeView> list=this.cityDistributeViewService.selectByJobName(jobName,isSchool);
         String res= JSON.toJSONString(list);
         return res;
@@ -55,7 +53,6 @@ public class DataVisualController {
     @RequestMapping(value="/selectAvgSalaryByJobName",produces="html/text;charset=UTF-8")
     @ResponseBody
     public String selectAvgSalaryByJobName(String isSchool){   //group by jobName 计算不同职位的平均薪资
-        logger.info("视图3");
         List<SalaryCompareView> list=this.salaryCompareViewService.selectAvgSalaryByJobName(isSchool);
         String res= JSON.toJSONString(list);
         return res;
@@ -63,14 +60,12 @@ public class DataVisualController {
 
     @RequestMapping("/getDataVisualPage")
     public String getDataVisualPage(){
-        logger.info("数据可视化页");
         return "DataVisualPage";
     }
 
     @RequestMapping(value="/selectBaseCreateTimeViewByJobName",produces="html/text;charset=UTF-8")
     @ResponseBody
     public String selectBaseCreateTimeViewByJobName(String jobName,String isSchool){
-        logger.info("视图4");
         List<BaseCreateTimeView> list=this.baseCreateTimeViewService.selectByJobName(jobName,isSchool);
         String res= JSON.toJSONString(list);
         return res;
@@ -79,7 +74,6 @@ public class DataVisualController {
     @RequestMapping(value="/selectBaseCompanySizeViewByJobName",produces="html/text;charset=UTF-8")
     @ResponseBody
     public String selectBaseCompanySizeViewByJobName(String jobName,String isSchool){
-        logger.info("视图5");
         List<BaseCompanySizeView> list=this.baseCompanySizeViewService.selectByJobName(jobName,isSchool);
         List<BaseCompanySizeView> list2=new ArrayList<>();
         //统计
@@ -122,7 +116,6 @@ public class DataVisualController {
     @RequestMapping(value="/selectBaseSalaryRangeViewByJobName",produces="html/text;charset=UTF-8")
     @ResponseBody
     public String selectBaseSalaryRangeViewByJobName(String jobName,String isSchool){
-        logger.info("视图6");
         List<BaseSalaryRangeView> list=this.baseSalaryRangeViewService.selectByJobName(jobName,isSchool);
         String res= JSON.toJSONString(list);
         return res;

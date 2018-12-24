@@ -53,7 +53,6 @@ public class RequestThread implements Runnable{
     public void run() {
         try{
             if(!CrawlerInfoServiceImpl.isRunning){
-                logger.info(this.threadIdentify+" 爬虫线程已停止");
                 return;
             }
             Thread.sleep(1000);
@@ -148,7 +147,7 @@ public class RequestThread implements Runnable{
         if(this.recruitmentInfoService!=null){
             return this.recruitmentInfoService.addRecruitmentInfoList(list);
         }else{
-            System.out.println("recruitmentInfoService null");
+            logger.info("recruitmentInfoService null");
             return false;
         }
     }

@@ -34,17 +34,11 @@ public class DataToView4 implements Runnable{
      */
     public void dataToBaseCompanySizeView(){
         logger.info("视图4 start---------------------");
-        System.out.println("查询所有招聘信息中...");
         List<BaseCompanySizeView> list=this.recruitmentInfoService.selectBaseCompanySizeViewCount();//初始数据
-        System.out.println("查询所有招聘信息完成.");
 
-        System.out.println("删除原有数据中...");
         this.baseCompanySizeViewService.deleteAll();//删除原有数据
-        System.out.println("删除原有数据完成.");
 
-        System.out.println("保存最终数据中...");
         this.baseCompanySizeViewService.addList(list);//保存中间数据
-        System.out.println("保存最终数据完成.");
 
         logger.info("视图4 end--------------------");
     }

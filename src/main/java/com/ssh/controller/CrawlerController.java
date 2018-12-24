@@ -33,7 +33,6 @@ public class CrawlerController {
 
     @RequestMapping("/getCrawlerPage")
     public String getCrawlerPage(){
-        logger.info("爬虫管理页");
         return "CrawlerPage";
     }
 

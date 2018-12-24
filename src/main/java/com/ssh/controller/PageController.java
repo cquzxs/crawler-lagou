@@ -29,7 +29,6 @@ public class PageController {
     @RequestMapping(value="/showInfoList",produces="html/text;charset=UTF-8")
     @ResponseBody
     public String showInfoList(String jobName,String isSchool,String isFuzzyQuery){  //第一页,需要初始化页面信息
-        logger.info("第一页");
         String res="";
         int maxResult=GlobelData.pageSize;
         int firstResult=0;
@@ -55,7 +54,6 @@ public class PageController {
     @RequestMapping(value="/prePage",produces="html/text;charset=UTF-8")
     @ResponseBody
     public String prePage(){    //上一页
-        logger.info("上一页");
         String res="";
         if(GlobelData.currentPage>1){ //页码大于1，当前页减1；页码等于1，当前页不变
             GlobelData.currentPage--;
@@ -75,7 +73,6 @@ public class PageController {
     @RequestMapping(value="/nextPage",produces="html/text;charset=UTF-8")
     @ResponseBody
     public String nextPage(){  //下一页
-        logger.info("下一页");
         String res="";
         if(GlobelData.currentPage<GlobelData.pageCount){   //页码小于总页数，当前页加1；页码等于总页数，当前页不变
             GlobelData.currentPage++;
@@ -86,7 +83,6 @@ public class PageController {
     @RequestMapping(value="/firstPage",produces="html/text;charset=UTF-8")
     @ResponseBody
     public String firstPage(){   //首页
-        logger.info("首页");
         String res="";
         GlobelData.currentPage=1;   //当前页设为1
         res=getJsonData();
@@ -95,7 +91,6 @@ public class PageController {
     @RequestMapping(value="/tailPage",produces="html/text;charset=UTF-8")
     @ResponseBody
     public String tailPage(){    //尾页
-        logger.info("尾页");
         String res="";
         GlobelData.currentPage=GlobelData.pageCount;   //当前页设为总页数
         res=getJsonData();
@@ -104,7 +99,6 @@ public class PageController {
     @RequestMapping(value="/goToCertainPage",produces="html/text;charset=UTF-8")
     @ResponseBody
     public String goToCertainPage(String pageNumber){   //跳转到具体某一页
-        logger.info("跳转到具体某一页");
         String res="";
         if(Integer.parseInt(pageNumber)<=GlobelData.pageCount && Integer.parseInt(pageNumber)>=1){
             GlobelData.currentPage=Integer.parseInt(pageNumber);//pageNumber在1到总页数之间，将当前页设为pageNumber
@@ -115,7 +109,6 @@ public class PageController {
     @RequestMapping(value="/setPageSize",produces="html/text;charset=UTF-8")
     @ResponseBody
     public String setPageSize(String pageSize){   //设置页面大小
-        logger.info("设置页面大小");
         String res="";
         if(Integer.parseInt(pageSize)<=GlobelData.totalCount && Integer.parseInt(pageSize)>=1){
             GlobelData.pageSize=Integer.parseInt(pageSize);//设置页面大小
@@ -129,7 +122,6 @@ public class PageController {
     @RequestMapping(value="/showPageInfo",produces="html/text;charset=UTF-8")
     @ResponseBody
     public String showPageInfo(){     //展示分页信息
-        logger.info("展示分页信息");
         String res="";
         MyPage myPage=new MyPage();
         myPage.setCurrentPage(GlobelData.currentPage);

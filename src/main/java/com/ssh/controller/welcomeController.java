@@ -9,7 +9,6 @@ public class welcomeController {
     private static final Logger logger = Logger.getLogger(welcomeController.class);
     @RequestMapping("/getWelcomePage")
     public String getWelcomePage(){
-        logger.info("首页");
         return "WelcomePage";
     }
 }

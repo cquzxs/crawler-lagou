@@ -36,14 +36,9 @@ public class DataToView3 implements Runnable{
      * 视图3：基于发布时间的视图
      */
     public void dataToBaseCreateTimeView(){
-        logger.info("视图3 start---------------------");
-        System.out.println("查询所有招聘信息中...");
         List<RecruitmentInfo> list=this.recruitmentInfoService.selectAllRecruitmentInfo();//初始数据
-        System.out.println("查询所有招聘信息完成.");
 
-        System.out.println("删除原有数据中...");
         this.baseCreateTimeViewService.deleteAll();//删除中间数据
-        System.out.println("删除原有数据完成.");
 
         List<BaseCreateTimeView> viewList=new ArrayList<>();
         for (RecruitmentInfo s:list) {
@@ -54,21 +49,13 @@ public class DataToView3 implements Runnable{
             baseCreateTimeView.setIsSchool(s.getFollowsCount());
             viewList.add(baseCreateTimeView);
         }
-        System.out.println("保存中间数据中...");
         this.baseCreateTimeViewService.addList(viewList);//保存中间数据
-        System.out.println("保存中间数据完成.");
 
-        System.out.println("获取最终数据中...");
         List<BaseCreateTimeView> viewList2=this.baseCreateTimeViewService.selectCount();//获取最终数据
-        System.out.println("获取最终数据中...");
 
-        System.out.println("删除中间数据中...");
         this.baseCreateTimeViewService.deleteAll();//删除中间数据
-        System.out.println("删除中间数据完成.");
 
-        System.out.println("保存最终数据中...");
         this.baseCreateTimeViewService.addList(viewList2);//保存最终数据
-        System.out.println("保存最终数据完成.");
 
         logger.info("视图3 end--------------------");
     }

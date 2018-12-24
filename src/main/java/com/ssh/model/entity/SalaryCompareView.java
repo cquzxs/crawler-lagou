@@ -8,7 +8,7 @@ import javax.persistence.*;
 //薪水对比视图
 @Data
 @Entity   //hibernate之实体配置
-@Table(name = "SalaryCompareView")
+@Table(name = "salaryCompareView")
 public class SalaryCompareView {
     @Id
     @Column(name = "id")
