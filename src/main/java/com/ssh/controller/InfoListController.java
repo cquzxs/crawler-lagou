@@ -1,8 +1,8 @@
 package com.ssh.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.ssh.constants.MyConstants;
-import com.ssh.service.api.IRecruitmentInfoSevice;
+import com.ssh.model.constants.MyConstants;
+import com.ssh.service.basic.api.IRecruitmentInfoService;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +17,7 @@ import java.util.List;
 @Controller
 public class InfoListController {
     @Resource(name="recruitmentInfoService")
-    private IRecruitmentInfoSevice recruitmentInfoService;//招聘信息表
+    private IRecruitmentInfoService recruitmentInfoService;//招聘信息表
 
     private static final Logger logger = Logger.getLogger(InfoListController.class);
 
@@ -44,7 +44,6 @@ public class InfoListController {
             }
         }
         res= JSON.toJSONString(map);
-        //System.out.println(res);
         return res;
     }
 

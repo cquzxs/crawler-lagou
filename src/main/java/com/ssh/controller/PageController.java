@@ -3,8 +3,8 @@ package com.ssh.controller;
 import com.alibaba.fastjson.JSON;
 import com.ssh.entity.RecruitmentInfo;
 import com.ssh.model.MyPage;
-import com.ssh.service.api.IRecruitmentInfoSevice;
-import com.ssh.util.GlobelData;
+import com.ssh.service.basic.api.IRecruitmentInfoService;
+import com.ssh.service.util.GlobelData;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +19,7 @@ import java.util.List;
 @Controller
 public class PageController {
     @Resource(name="recruitmentInfoService")
-    private IRecruitmentInfoSevice recruitmentInfoService;//招聘信息表
+    private IRecruitmentInfoService recruitmentInfoService;//招聘信息表
     private String jobName="Java";
     private String isSchool="1";
     private String isFuzzyQuery="0";

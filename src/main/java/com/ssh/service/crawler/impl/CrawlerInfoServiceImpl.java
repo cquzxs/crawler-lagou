@@ -1,13 +1,11 @@
 package com.ssh.service.crawler.impl;
 
-import com.ssh.Task.ManagementThread;
-import com.ssh.Task.MonitorThread;
-import com.ssh.constants.MyConstants;
-import com.ssh.controller.CrawlerController;
-import com.ssh.service.api.IRecruitmentInfoSevice;
+import com.ssh.service.Task.ManagementThread;
+import com.ssh.model.constants.MyConstants;
+import com.ssh.service.basic.api.IRecruitmentInfoService;
 import com.ssh.service.crawler.api.ICrawlerInfoService;
-import com.ssh.util.GetUrls;
-import com.ssh.util.GlobelData;
+import com.ssh.service.util.GetUrls;
+import com.ssh.service.util.GlobelData;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
@@ -25,15 +23,11 @@ public class CrawlerInfoServiceImpl implements ICrawlerInfoService{
     private static final Logger logger = Logger.getLogger(CrawlerInfoServiceImpl.class);
 
     @Resource(name="recruitmentInfoService")
-    private IRecruitmentInfoSevice recruitmentInfoService;//招聘信息表
+    private IRecruitmentInfoService recruitmentInfoService;//招聘信息表
 
-    private boolean isRunning = false;
-    private String isSchool="1";
-    private String isDelete="1";
-
+    public static boolean isRunning = false;
     private HashMap<String,String> map=new HashMap<>();//用于存储职位类别，key为职位名，value为url编码
     private ExecutorService executorService;//线程池
-    private static int lastRequestTimes=0;//上一次的请求次数，用于计算请求速度
 
     /**
      * 开始爬取
@@ -49,27 +43,24 @@ public class CrawlerInfoServiceImpl implements ICrawlerInfoService{
             init();
             deleteData(isDelete);
             requestFirstPage();
-            startCrawler();
+            startCrawler(isSchool);
         }
     }
 
     /**
      * 开启爬虫任务
+     *
+     * @param isSchool 是否是应届生
      */
-    private void startCrawler() {
+    private void startCrawler(String isSchool) {
         //启动爬虫管理线程
         if(executorService != null){
             executorService = Executors.newFixedThreadPool(MyConstants.poolSize);
         }
         Iterator iterator=map.entrySet().iterator();
-        ManagementThread managementThread=new ManagementThread(iterator,recruitmentInfoService,executorService);
+        ManagementThread managementThread=new ManagementThread(iterator,recruitmentInfoService,executorService,isSchool);
         executorService.execute(managementThread);
         logger.info("启动爬虫管理线程");
-
-        //启动监听者线程
-        MonitorThread monitorThread=new MonitorThread(executorService);
-        executorService.execute(monitorThread);
-        logger.info("启动监听者线程");
     }
 
     /**
@@ -101,10 +92,6 @@ public class CrawlerInfoServiceImpl implements ICrawlerInfoService{
     private void init() {
         logger.info("初始化全局数据");
         GlobelData.set.clear();
-        GlobelData.initGlobelData();
-        GlobelData.status= MyConstants.status4;
-        lastRequestTimes=0;
-        GlobelData.isSchool=isSchool;
     }
 
     /**
@@ -112,6 +99,6 @@ public class CrawlerInfoServiceImpl implements ICrawlerInfoService{
      */
     @Override
     public void stopCrawler() {
-
+        isRunning = false;
     }
 }

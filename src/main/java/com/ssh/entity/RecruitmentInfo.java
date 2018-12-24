@@ -1,7 +1,6 @@
 package com.ssh.entity;
 
 import lombok.Data;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
